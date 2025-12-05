@@ -4,11 +4,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #072f4e;
 }
 
 header {
-    background-color: #333;
+    background-color: #072f4e;
     color: white;
     text-align: center;
     padding: 50px 0;
@@ -29,13 +29,13 @@ section {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #072f4e;
     color: white;
 }
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #072f4e;
 }
 
 a:hover {
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .main-menu {
-    background-color: #333;
+    background-color: #072f4e;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px 0;   
 }
@@ -80,12 +80,12 @@ a:hover {
 }
 
 .main-menu a:hover {
-    background-color: #5886b4;
-    color: #69acd8;
+    background-color: #2898ee;
+    color: #072f4e;
 }
 
 .main-menu a:active{
-    background-color: #34495e;
+    background-color: #3378ad;
     color: white;
 }
 
@@ -98,7 +98,7 @@ a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #34495e;
+    background-color: #1f547e;
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -146,37 +146,47 @@ a:hover {
     color: #fff;
 }
 
-#accordion1 {
-    background-color: turquoise;
+.nav {
+   list-style-type: none;
+   border-radius: 10px;
+   background: #666;
+   margin: 0;
+   padding: 0;
+   width: 300px;
+   overflow: hidden;
 }
 
-.basic-accordion {
-    display: block;
-    width: auto;
-    margin: 10px 0;
+.nav-item {
+   font-size: 20px;
+   background: #284eee;
+   border-bottom: 1px solid rgba(63, 46, 73, 0.3);
 }
 
-.basic-accordion summary {
-    display: flex;
-    background-color: radial-gradient(circle, pink, blue);
-    color: black;
-    border-radius: 8px;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    justify-content: flex start;
-    align-items: center;
+.nav-item:last-child {
+   border-bottom: none;
 }
 
-.basic-accordion summary::before {
-    content: "+";
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 5px;
-    width: 20px;
-    text-align: center;
+.nav-link, .nav-submenu-link {
+   text-decoration: none;
+   padding: 16px 20px;
+   display: block;
+   color: #fff;
 }
 
-.basic-accordion[open] summary::before {
-    content: "-";
+.nav-submenu {
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height 0.5s;
+   background: #1f547e;
+}
+.nav-submenu:target {
+   max-height: 10rem;
+}
+.nav-submenu-link {
+   font-size: 16px;
+   background: transparent;
+   transition: background 0.2s ease-in;
+}
+.nav-submenu-link:hover {
+   background: #184163;
 }
